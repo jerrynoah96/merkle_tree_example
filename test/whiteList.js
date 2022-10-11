@@ -50,7 +50,7 @@ describe("Check if merkle root is working", function () {
       const proof = merkleTree.getHexProof(leaf);
   
       // Provide the Merkle Proof to the contract, and ensure that it can verify
-      // that this leaf node was indeed part of the Merkle Tree
+      // that this leaf node was indeed part of the Merkle Tree.
       let verified = await Whitelist.checkInWhitelist(proof, 2);
       expect(verified).to.equal(true);
       
